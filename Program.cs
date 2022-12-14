@@ -5,7 +5,7 @@
         static long size = 0; 
         static long delsize = 0;
         static long delcount = 0;
-        const double timelimit = 2;
+        const double timelimit = 30;
         static void Main(string[] args)
         {
             Console.WriteLine("Текущее время: " + DateTime.Now);
