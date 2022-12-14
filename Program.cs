@@ -4,6 +4,7 @@
     {
         static long size = 0; 
         static long delsize = 0;
+        static long delcount = 0;
         const double timelimit = 2;
         static void Main(string[] args)
         {
@@ -15,6 +16,7 @@
             size = 0;
             DirFileDelete(path);
             Console.WriteLine("Размер удаленных файлов: " + delsize);
+            Console.WriteLine("Количество удаленных файлов: " + delcount);
             DirFileSize(path);
             Console.WriteLine("Конечный размер: " + size);
         }
@@ -68,6 +70,7 @@
                         {
                             var fileinfo = new FileInfo(s);
                             delsize += fileinfo.Length;
+                            delcount++;
                             fileinfo.Delete();
                         }
                     }
